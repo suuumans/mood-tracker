@@ -1,0 +1,155 @@
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #668877;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1fb1b1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #555;
+}
+
+#mood-selection, #mood-timeline, #calendar-view {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #656161;
+    border-radius: 5px;
+}
+
+.mood-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.mood-button {
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#mood-message {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#mood-timeline .view-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#mood-timeline .view-options button {
+    padding: 8px 15px;
+    border: 1px solid #656161;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #b8bf5d;
+}
+
+#mood-timeline .view-options button.active {
+    background-color: #1e6a29;
+}
+
+#mood-list {
+    list-style: none;
+    padding: 0;
+}
+
+#mood-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#mood-list li:last-child {
+    border-bottom: none;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.calendar-day {
+    padding: 10px;
+    border: 1px solid #f0f0f0;
+}
+
+.calendar-day.has-mood {
+    font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .mood-options {
+        flex-wrap: wrap;
+    }
+
+    .mood-button {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    #mood-timeline .view-options {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #mood-timeline .view-options button {
+        margin-bottom: 5px;
+    }
+
+    #calendar {
+        font-size: 0.8em;
+    }
+}
+
+/* for smaller devices */
+@media (max-width: 320px) {
+    #calendar {
+        font-size: 0.7em;
+        gap: 1px;
+    }
+
+    .calendar-day {
+        padding: 3px 1px;
+        font-size: 0.8em;
+        border-width: 1px;
+    }
+
+    .container {
+        width: 95%;
+        margin: 2px auto;
+        padding: 5px;
+    }
+
+    #mood-selection, #mood-timeline, #calendar-view {
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+}
