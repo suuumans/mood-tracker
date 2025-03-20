@@ -3,6 +3,9 @@
 
 A simple web application for tracking daily moods and visualizing emotional patterns over time.
 
+## Live link
+[Click here](https://meek-longma-1963ae.netlify.app/)
+
 ## 🚀 Images
 
 ### Desktop View
